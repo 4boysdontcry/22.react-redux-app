@@ -6,4 +6,4 @@ const actUserLogout = () => {
 	return { type: 'USER_LOGOUT' }
 }
 
-export {actUserLogin, actUserLogout}
+export { actUserLogin, actUserLogout }
