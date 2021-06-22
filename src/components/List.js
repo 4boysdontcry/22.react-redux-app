@@ -1,10 +1,17 @@
 import React, { useCallback } from 'react';
+import { useDispatch } from 'react-redux'
+import { actCommentsRemove } from '../store/actions/comments-action'
 
 const List = ({ v }) => {
 
+	const dispatch = useDispatch()
+	const id = v.id
+
 	const onRemove = useCallback( e => {
 		e.preventDefault()
-	}, [])
+		dispatch(actCommentsRemove(id))
+		// if(window.confirm('정말로 삭제하시겠습니까?')){}
+	}, [dispatch, id])
 
 	return (
 		<tr>
