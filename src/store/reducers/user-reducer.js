@@ -1,24 +1,25 @@
+// 기본값
 const initialState = {
 	isLogin: false,
 	info: null
 }
 
-const userReducer = (prevState = initialState, action) => {
+const userReducer = (state = initialState, action) => {
 	switch(action.type) {
 		case 'USER_LOGIN':
 			return {
-				...prevState,
+				...state,
 				isLogin: true,
 				info: action.payload
 			}
 		case 'USER_LOGOUT':
 			return {
-				...prevState,
+				...state,
 				isLogin: false,
 				info: null
 			}
 		default: 
-			return prevState
+			return state
 	}
 }
 

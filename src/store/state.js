@@ -1,4 +1,9 @@
-export default {
-  user: null,
-  comments: []
+const state = {
+	user: {
+		isLogin: false,
+		info: null
+	},
+	comments: []
 }
+
+export default state
